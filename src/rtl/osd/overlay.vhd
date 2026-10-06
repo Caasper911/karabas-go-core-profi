@@ -19,6 +19,8 @@ entity overlay is
 		STATUS_SD : in std_logic := '0'; -- SD card r/w status
 		STATUS_CF : in std_logic := '0'; -- CF card r/w status
 		STATUS_FD : in std_logic := '0'; -- FDD r/w status
+		STATUS_GS : in std_logic := '0'; -- GS r/w status
+		STATUS_UA : in std_logic := '0'; -- GS r/w status
 		
 		OSD_COMMAND 	: in std_logic_vector(15 downto 0)
 	);
@@ -112,7 +114,9 @@ begin
 		
 		STATUS_SD => STATUS_SD,
 		STATUS_CF => STATUS_CF,
-		STATUS_FD => STATUS_FD
+		STATUS_FD => STATUS_FD,
+		STATUS_GS => STATUS_GS,
+		STATUS_UA => STATUS_UA
     );
 
 	-- osd vram

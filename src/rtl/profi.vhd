@@ -840,6 +840,8 @@ port map (
 	STATUS_FD		=> not(fdd_cs_n) and (not(cpu_rd_n) or not(cpu_wr_n)),
 	STATUS_SD 		=> zc_spi_start and zc_wr_en,
 	STATUS_CF 		=> hdd_active,
+	STATUS_GS 		=> gs_oe,
+	STATUS_UA 		=> not zxuno_uart_oe_n or not zifi_oe_n,
 	
 	OSD_COMMAND 	=> osd_command
 );
